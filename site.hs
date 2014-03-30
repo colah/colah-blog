@@ -40,8 +40,10 @@ main = hakyll $ do
             route   idRoute
             compile copyFileCompiler
 
-    match (fromList ["about.rst", "contact.md"]) $ do
-        route   $ setExtension ".html"
+    match "pages/*.md" $ do
+        route   $ gsubRoute "pages/" (const "") `composeRoutes`
+                  --gsubRoute "/index" (const "") `composeRoutes`
+                  setExtension "html"
         compile $ pandocCompilerWith myReaderOptions myWriterOptions
             >>= loadAndApplyTemplate "templates/default.html" (mathCtx <> defaultContext)
             >>= relativizeUrls
