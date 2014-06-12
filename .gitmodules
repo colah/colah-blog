@@ -1,0 +1,3 @@
+[submodule "posts"]
+	path = posts
+	url = git@github.com:colah/colah-blog-posts.git

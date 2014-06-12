@@ -68,26 +68,26 @@ pre {
     word-wrap: break-word;                 /* IE 5.5+ and up */
 }
 
-blockquote:hover{
+/*blockquote:hover{
     font-size: 120%;
     font-weight: bold;
 }
 
 pre:hover{
     font-size: 120%;
-}
+}*/
 
 a:link {
-    color: rgb(109,109,109);
+    color: rgb(109,109,150);
 }
 a:visited { 
-    color: rgb(109,109,109);
+    color: rgb(109,109,150);
 }
 a:hover {
-    color: rgb(109,109,109);
+    color: rgb(109,109,180);
 }
 a:active {
-    color: rgb(109,109,109);
+    color: rgb(109,109,180);
 }
 
 nav {
@@ -105,9 +105,30 @@ nav {
     -moz-box-shadow:0 0 10px #555;
 }
 
+.bigcenterimgcontainer {
+    width: 70%;
+    height: auto;
+    margin: 30px auto;
+    display: block;
+}
+
+.zoombigcenterimgcontainer {
+    width: 70%;
+    height: auto;
+    margin: 30px auto;
+    display: block;
+}
+
+.zoombigcenterimgcontainer:hover {
+    width: 100%;
+    height: auto;
+    margin: 30px auto;
+    display: block;
+}
+
 .centerimgcontainer {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: auto;
     margin: 30px auto;
     display: block;
 }
@@ -115,7 +136,7 @@ nav {
 /* To float right, include <div class="spaceafterimg"></div>*/
 .floatrightimgcontainer {
     width: 200px;
-    height: 200px;
+    height: auto;
     margin: 0px 0px 30px 30px;
     float: right;
 }
@@ -132,6 +153,18 @@ img {
 }
 
 .caption{
-    font-size: 90%;
+    font-size: 85%;
     text-align: center;
+    font-weight: bold;
+}
+
+.smallframe{
+        -ms-zoom: 0.5;
+        -moz-transform: scale(0.5);
+        -moz-transform-origin: 0 0;
+        -o-transform: scale(0.5);
+        -o-transform-origin: 0 0;
+        -webkit-transform: scale(0.5);
+        -webkit-transform-origin: 0 0;
+        display: block;
 }

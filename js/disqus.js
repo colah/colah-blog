@@ -1,4 +1,6 @@
-var disqus_shortname = 'lambdaoinks'; 
+
+
+var disqus_shortname = 'colah'; 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = 'http://disqus.com/forums/lambdaoinks/embed.js';
@@ -13,6 +15,14 @@ var disqus_shortname = 'lambdaoinks';
 
 jQuery(document).ready(function() {
     jQuery("p:not(.footnotes ol li p)").inlineDisqussions({
+      identifier: 'disqussion',
+      displayCount: true,
+      highlighted: false,
+      position: 'right',
+      background: 'white',
+      maxWidth: 4000,
+    });
+    jQuery("img").inlineDisqussions({
       identifier: 'disqussion',
       displayCount: true,
       highlighted: false,
