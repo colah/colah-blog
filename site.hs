@@ -107,7 +107,7 @@ mathCtx :: Context String
 mathCtx = field "mathjax" $ \item -> do
     metadata <- getMetadata $ itemIdentifier item
     return $ if "mathjax" `M.member` metadata
-             then "<script type=\"text/javascript\" src=\"http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML\"></script>"
+             then "<script type=\"text/javascript\" src=\"https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML\"></script>"
              else ""
 
 onlyPublished :: MonadMetadata m => [Item a] -> m [Item a]
@@ -132,5 +132,5 @@ myWriterOptions = defaultHakyllWriterOptions {
       writerReferenceLinks = True
     , writerHtml5 = True
     , writerHighlight = True
-    , writerHTMLMathMethod = MathJax "http://cdn.mathjax.org/mathjax/latest/MathJax.js"
+    , writerHTMLMathMethod = MathJax "https://cdn.mathjax.org/mathjax/latest/MathJax.js"
     }
